@@ -1,0 +1,23 @@
+# Site settings
+title: Chain 76 Use Cases
+description: Blockchain use cases for the pharmaceuticals industry
+permalink: pretty
+url: https://usecases.chain76.org
+
+# Post permalink
+collections:
+  use-cases:
+    output: true
+    permalink: "/:path"
+    layout: use-case
+
+defaults:
+  -
+    scope:
+      type: use-cases
+    values:
+      layout: use-case
+      
+exclude:
+  - README.md
+  - .github/
