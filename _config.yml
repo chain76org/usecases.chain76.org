@@ -21,3 +21,12 @@ defaults:
 exclude:
   - README.md
   - .github/
+  # Below here are the default Jekyll excludes
+  # but they are overridden because we have specified the above
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

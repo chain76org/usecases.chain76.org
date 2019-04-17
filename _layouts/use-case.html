@@ -52,10 +52,10 @@
           <div class="row">
             <div class="col-lg-5 px-0">
               <div class="sticky-top h-50vh h-lg-100vh">
-                <div class="owl-carousel owl-theme owl-dots-inner owl-theme-white h-100" data-options='{"items":1,"autoplay":true,"nav":true,"loop":true,"autoplayHoverPause":true,"animateOut":"fadeOut"}' data-zanim-lg='{"animation":"zoom-out-slide-right","delay":0.4}'
+                <div class="owl-carousel owl-theme owl-dots-inner owl-theme-white h-100" data-options='{"items":1,"autoplay":true,"nav":true,"loop":true,"autoplayHoverPause":true,"animateOut":"fadeOut"}' data-zanim-lg='{"animation":"zoom-out-slide-right","delay":0.2}'
                   data-zanim-trigger="scroll">
 {% for image in page.images %}
-                  <img class="fit-cover h-lg-100vh" src="assets/img/use-cases/{{ image }}" alt="{{ image }}">
+                  <img class="fit-cover h-lg-100vh" src="{{ page.slug }}/{{ image }}" alt="{{ image }}">
 {% endfor %}
                 </div>
               </div>
@@ -63,45 +63,45 @@
             <div class="col-lg-7 bg-white py-6 py-lg-4 py-xl-6">
               <div class="row h-100 justify-content-center">
                 <div class="col-lg-10">
-                  <div data-zanim-timeline='{"delay":0.4}' data-zanim-trigger="scroll">
+                  <div data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
                     <div class="overflow-hidden">
-                      <div data-zanim-xs='{"delay":0.1}'>
+                      <div data-zanim-xs='{"delay":0.05}'>
                         <a class="btn btn-link pl-0 text-black" href="/"><span class="fas fa-chevron-left" data-fa-transform="down-1"></span><span class="pl-2 font-weight-bold">all use cases</span></a>
                       </div>
                     </div>
                     <div class="overflow-hidden">
-                      <h2 data-zanim-xs='{"delay":0.2}'>{{ page.title }}</h2>
+                      <h2 data-zanim-xs='{"delay":0.1}'>{{ page.title }}</h2>
                     </div>
                     <div class="row mt-4">
                       <div class="col-xl-9">
                         <div class="overflow-hidden">
-                          <p class="lead text-sans-serif font-weight-normal text-600" data-zanim-xs='{"delay":0.3}'>{{ page.summary }}</p>
+                          <p class="lead text-sans-serif font-weight-normal text-600" data-zanim-xs='{"delay":0.15}'>{{ page.summary }}</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="row">
 
-                    <div class="col" data-zanim-timeline='{"delay":0.6}' data-zanim-trigger="scroll">
+                    <div class="col" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
                       <div class="overflow-hidden">
-                        <h6 class="mt-6 text-uppercase ls" data-zanim-xs='{"delay":0.1}'>Company</h6>
+                        <h6 class="mt-6 text-uppercase ls" data-zanim-xs='{"delay":0.05}'>Company</h6>
                       </div>
                       <div class="overflow-hidden">
 {% for company in page.companies %}
-                        <p class="text-sans-serif text-600" data-zanim-xs='{"delay":0.2}'>{{ company }}</p>
+                        <p class="text-sans-serif text-600" data-zanim-xs='{"delay":0.1}'>{{ company }}</p>
 {% endfor %}
                       </div>
                       <div class="overflow-hidden">
-                        <h6 class="mt-4 text-uppercase ls" data-zanim-xs='{"delay":0.1}'>Status</h6>
+                        <h6 class="mt-4 text-uppercase ls" data-zanim-xs='{"delay":0.05}'>Status</h6>
                       </div>
                       <div class="overflow-hidden">
-                        <p class="text-sans-serif text-600" data-zanim-xs='{"delay":0.2}'>{{ page.status }}</p>
+                        <p class="text-sans-serif text-600" data-zanim-xs='{"delay":0.1}'>{{ page.status }}</p>
                       </div>
                       <div class="overflow-hidden">
-                        <h6 class="mt-4 text-uppercase ls" data-zanim-xs='{"delay":0.1}'>Tags</h6>
+                        <h6 class="mt-4 text-uppercase ls" data-zanim-xs='{"delay":0.05}'>Tags</h6>
                       </div>
                       <div class="overflow-hidden">
-                        <ul class="list-unstyled text-sans-serif text-600" data-zanim-xs='{"delay":0.2}'>
+                        <ul class="list-unstyled text-sans-serif text-600" data-zanim-xs='{"delay":0.1}'>
 {% for tag in page.tags %}
                           <li>{{ tag }}</li>
 {% endfor %}
@@ -112,7 +112,7 @@
                   <div class="row my-6">
 {% for image in page.images %}
                     <div class="col-sm-6">
-                      <img class="rounded img-fluid" src="assets/img/use-cases/{{ image }}" alt="{{ image }}" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll">
+                      <img class="rounded img-fluid" src="{{ page.slug }}/{{ image }}" alt="{{ image }}" data-zanim-xs='{"delay":0.05,"animation":"zoom-in"}' data-zanim-trigger="scroll">
                     </div>
 {% endfor %}
                   </div>
@@ -123,7 +123,7 @@
                   <div class="row justify-content-center">
                     <div class="col-lg-10">
                       <div class="overflow-hidden">
-                        <p class="text-900 fs-2 text-sans-serif font-weight-light" data-zanim-xs='{"delay":0.1,"from":{"scale":1.1,"opacity":1},"to":{"scale":1,"opacity":1}}' data-zanim-trigger="scroll">{{ event }}</p>
+                        <p class="text-900 fs-2 text-sans-serif font-weight-light" data-zanim-xs='{"delay":0.05,"from":{"scale":1.1,"opacity":1},"to":{"scale":1,"opacity":1}}' data-zanim-trigger="scroll">{{ event }}</p>
                       </div>
                       <div class="overflow-hidden">
                         <h5 class="fs-0 text-700 font-weight-bold mt-4" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"><span class="text-black">Presented</span></h5>

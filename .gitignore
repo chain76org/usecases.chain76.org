@@ -1,1 +1,10 @@
-_site
+# https://github.com/github/gitignore/blob/master/Jekyll.gitignore
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# https://github.com/github/gitignore/blob/master/Ruby.gitignore
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/

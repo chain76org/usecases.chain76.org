@@ -82,7 +82,8 @@ layout: none
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
-{% for page in site.use-cases %}
+{% assign pages = site.use-cases | sort: 'post_date' | reverse %}
+{% for page in pages %}
               <div class="mb-6 mb-xl-8">
                 <a class="text-black" href="{{ page.url }}">
                   <h3>{{ page.title }}</h3>
@@ -96,7 +97,7 @@ layout: none
                     <a href="#"><span class="far fa-comment text-300 mt-3 ml-4"></span><span class="text-400 text-sans-serif pl-1">48</span></a>
                   </div>
                   <div class="col-lg-3">
-                    <img class="img-fluid" src="assets/img/use-cases/{{ page.images[0] }}" alt="{{ page.images[0] }}">
+                    <img class="img-fluid" src="{{ page.slug }}/{{ page.images[0] }}" alt="{{ page.images[0] }}">
                   </div>
                 </div>
               </div>
