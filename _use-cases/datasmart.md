@@ -2,7 +2,7 @@
 title: DataSmart - Platform to ensure data and information integrity during research
 summary: The data from late-stage preclinical and clinical phases of drug development is submitted in electronic form to regulators for approval process. Pharmaceutical companies are required to prove to regulators that the data has not been tampered with from the very first stage under the guidelines of 21CFRPart 11. Scientist.com has launched DataSmart platform to ensure data and information integrity throughout the drug research and development process. This may allow pharmaceutical industry to prove that critical supplier information and important research data has not been tampered from the starting.
 status: Complete
-# date: 2019-06-10
+date: 2019-10-06
 platform: []
 tags:
  - Health tech

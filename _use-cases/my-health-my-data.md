@@ -2,7 +2,7 @@
 title: My Health My Data Consortium
 summary: My Health My Data (MHMD) is a Horizon 2020 Research and Innovation Action. It is creating a blockchain-based platform for sharing personal health data for medical care, research and development.  
 status: In process
-# date: 2019.05
+date: 2019-10-06
 platform: HyperLedger 
 tags:
  - Identity
