@@ -26,21 +26,21 @@ events:
  - Business of Health, 2018
  - Distributed Health, Nashville 2018
 images: 
- - principle-coral-health-systems-1.jpg
- - principle-coral-health-systems-2.jpg
- - principle-coral-health-systems-3.jpg
- - principle-coral-health-systems-4.jpg
+ - principle-coral-health-systems-1.png
+ - principle-coral-health-systems-2.png
+ - principle-coral-health-systems-3.png
+ - principle-coral-health-systems-4.png
  - principle-coral-health-systems-5.jpg
- - principle-coral-health-systems-6.jpg
- - principle-coral-health-systems-7.jpg
+ - principle-coral-health-systems-6.png
+ - principle-coral-health-systems-7.png
  - principle-coral-health-systems-8.jpg
  - principle-coral-health-systems-9.jpg
- - principle-coral-health-systems-10.jpg
+ - principle-coral-health-systems-10.png
  - principle-coral-health-systems-11.jpg
  - principle-coral-health-systems-12.jpg
  - principle-coral-health-systems-13.jpg
- - principle-coral-health-systems-14.jpg
- - principle-coral-health-systems-15.jpg
+ - principle-coral-health-systems-14.png
+ - principle-coral-health-systems-15.png
  - principle-coral-health-systems-16.jpg
 ---
 
