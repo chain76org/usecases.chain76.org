@@ -45,7 +45,12 @@ events:
  - Interphex 2018: PharmaTech Keynote Series
  - Symposium: World of supply chain management 2018, Rider University
 images: 
- - 
+ - supply-chain-referencemodel.jpeg
+ - supply-chain-referencemodel-1.jpeg
+ - supply-chain-referencemodel-2.jpeg
+ - supply-chain-referencemodel-3.jpeg
+ - supply-chain-referencemodel-4.jpeg
+ - supply-chain-referencemodel-5.jpeg
 ---
 
 ### Problem statement
