@@ -37,7 +37,7 @@ events:
  - Blockchain health summit 2018
  - Distributed: Health 2018
 images: 
- - procredex-1.jpg
+ - procredex-1.png
  - procredex-2.jpg
 ---
 
