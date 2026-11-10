@@ -1,5 +1,5 @@
-(function($, specialEventName) {
-  'use strict';
+(function ($, specialEventName) {
+  "use strict";
 
   /**
    * Native event names for creating custom one.
@@ -12,22 +12,22 @@
    *
    * @return {Number}
    */
-  var getTime = function() {
+  var getTime = function () {
     return new Date().getTime();
   };
 
-  nativeEvent.original = 'click';
+  nativeEvent.original = "click";
 
-  if ('ontouchstart' in document.documentElement) {
-    nativeEvent.start = 'touchstart';
-    nativeEvent.end = 'touchend';
+  if ("ontouchstart" in document.documentElement) {
+    nativeEvent.start = "touchstart";
+    nativeEvent.end = "touchend";
   } else {
-    nativeEvent.start = 'mousedown';
-    nativeEvent.end = 'mouseup';
+    nativeEvent.start = "mousedown";
+    nativeEvent.end = "mouseup";
   }
 
   $.event.special[specialEventName] = {
-    setup: function(data, namespaces, eventHandle) {
+    setup: function (data, namespaces, eventHandle) {
       var $element = $(this);
       var eventData = {};
 
@@ -38,11 +38,11 @@
         .on(nativeEvent.original, false)
         // Split original event by two different and collect an information
         // on every phase.
-        .on(nativeEvent.start + ' ' + nativeEvent.end, function(event) {
+        .on(nativeEvent.start + " " + nativeEvent.end, function (event) {
           // Handle the event system of touchscreen devices.
           eventData.event = event.originalEvent.changedTouches ? event.originalEvent.changedTouches[0] : event;
         })
-        .on(nativeEvent.start, function(event) {
+        .on(nativeEvent.start, function (event) {
           // Stop execution if an event is simulated.
           if (event.which && event.which !== 1) {
             return;
@@ -53,7 +53,7 @@
           eventData.pageY = eventData.event.pageY;
           eventData.time = getTime();
         })
-        .on(nativeEvent.end, function(event) {
+        .on(nativeEvent.end, function (event) {
           // Compare properties from two phases.
           if (
             // The target should be the same.
@@ -62,10 +62,8 @@
             getTime() - eventData.time < 750 &&
             // Coordinates, when event ends, should be the same as they were
             // on start.
-            (
-              eventData.pageX === eventData.event.pageX &&
-              eventData.pageY === eventData.event.pageY
-            )
+            eventData.pageX === eventData.event.pageX &&
+            eventData.pageY === eventData.event.pageY
           ) {
             event.type = specialEventName;
             event.pageX = eventData.event.pageX;
@@ -85,12 +83,12 @@
         });
     },
 
-    remove: function() {
-      $(this).off(nativeEvent.start + ' ' + nativeEvent.end);
-    }
+    remove: function () {
+      $(this).off(nativeEvent.start + " " + nativeEvent.end);
+    },
   };
 
-  $.fn[specialEventName] = function(fn) {
-    return this[fn ? 'on' : 'trigger'](specialEventName, fn);
+  $.fn[specialEventName] = function (fn) {
+    return this[fn ? "on" : "trigger"](specialEventName, fn);
   };
-})(jQuery, 'tap');
+})(jQuery, "tap");

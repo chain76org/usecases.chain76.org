@@ -8,3 +8,12 @@ _site/
 /.bundle/
 /vendor/bundle
 /lib/bundler/man/
+# Yarn Berry and the Prettier cache used by the pages lint workflow
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+cache/

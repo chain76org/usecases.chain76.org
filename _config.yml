@@ -12,12 +12,11 @@ collections:
     layout: use-case
 
 defaults:
-  -
-    scope:
+  - scope:
       type: use-cases
     values:
       layout: use-case
-      
+
 exclude:
   - README.md
   - .github/

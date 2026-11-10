@@ -1,21 +1,21 @@
 ---
 layout: none
 ---
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
+    <!-- =============================================== -->
+    <!-- Document Title -->
+    <!-- =============================================== -->
     <title>Chain 76 Use Cases</title>
 
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
+    <!-- =============================================== -->
+    <!-- Favicons -->
+    <!-- =============================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
@@ -24,84 +24,104 @@ layout: none
     <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
 
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
+    <!-- =============================================== -->
+    <!-- Stylesheets -->
+    <!-- =============================================== -->
     <link href="assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900"
+      rel="stylesheet"
+    >
     <link href="assets/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
 
-    <!-- UNUSED STYLES
-    <link href="assets/lib/remodal/remodal.css" rel="stylesheet">
-    <link href="assets/lib/remodal/remodal-default-theme.css" rel="stylesheet">
+    <!--
+      UNUSED STYLES
+      <link href="assets/lib/remodal/remodal.css" rel="stylesheet">
+      <link href="assets/lib/remodal/remodal-default-theme.css" rel="stylesheet">
     -->
   </head>
 
   <body>
-
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
+    <!-- =============================================== -->
+    <!-- Main Content -->
+    <!-- =============================================== -->
     <main class="main minh-100vh" id="top">
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-9 py-lg-10" id="page-blog" data-zanim-xs='{"delay":0.4,"animation":"zoom-out"}' data-zanim-trigger="scroll">
-
-        <div class="bg-holder" style="background-image:url(assets/img/background.jpg);">
-        </div>
-        <!--/.bg-holder-->
+      <!-- ============================================ -->
+      <!-- <section> begin ============================ -->
+      <section
+        class="py-9 py-lg-10"
+        id="page-blog"
+        data-zanim-xs='{"delay":0.4,"animation":"zoom-out"}'
+        data-zanim-trigger="scroll"
+      >
+        <div class="bg-holder" style="background-image:url(assets/img/background.jpg);"></div>
+        <!-- /.bg-holder -->
 
         <div class="container">
           <div class="row align-items-center">
             <div class="col">
               <div class="overflow-hidden">
-                <h1 class="text-white text-underline" data-zanim-xs='{"delay":0.6}' data-zanim-trigger="scroll">Chain 76 &mdash; Use Cases</h1>
+                <h1 class="text-white text-underline" data-zanim-xs='{"delay":0.6}' data-zanim-trigger="scroll">
+                  Chain 76 &mdash; Use Cases
+                </h1>
               </div>
               <div class="overflow-hidden">
-                <h6 class="mb-0 text-white ls-2 text-uppercase" data-zanim-xs='{"delay":0.8}' data-zanim-trigger="scroll">a review of blockchain technology implementations and deployments in the pharma and healthcare sectors
+                <h6
+                  class="mb-0 text-white ls-2 text-uppercase"
+                  data-zanim-xs='{"delay":0.8}'
+                  data-zanim-trigger="scroll"
+                >
+                  a review of blockchain technology implementations and deployments in the pharma and healthcare sectors
                 </h6>
-                <h6 class="mt-3 mb-0 text-white ls-2" data-zanim-xs='{"delay":0.8}' data-zanim-trigger="scroll">Helping the community explore what has been done and learn about areas where others are focusing. This list is not comprehensive and does not contain sponsored content.  It has been curated by the community based on publicly available information or shared directly by individual project sponsors.
+                <h6 class="mt-3 mb-0 text-white ls-2" data-zanim-xs='{"delay":0.8}' data-zanim-trigger="scroll">
+                  Helping the community explore what has been done and learn about areas where others are focusing. This
+                  list is not comprehensive and does not contain sponsored content. It has been curated by the community
+                  based on publicly available information or shared directly by individual project sponsors.
                 </h6>
-             </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- end of .container-->
-
+        <!-- end of .container -->
       </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+      <!-- <section> close ============================ -->
+      <!-- ============================================ -->
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
+      <!-- ============================================ -->
+      <!-- <section> begin ============================ -->
       <section>
-
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
-{% assign pages = site.use-cases | sort: 'post_date' | reverse %}
-{% for page in pages %}
-              <div class="mb-6 mb-xl-8">
-                <a class="text-black" href="{{ page.url }}">
-                  <h3>{{ page.title }}</h3>
-                </a>
-                <div class="row">
-                  <div class="col-lg-9">
-                    <p class="text-sans-serif text-500" href="#">{{ page.summary }}</p>
-                    <a class="btn btn-link pl-0" href="{{ page.url }}">read more<span class="d-inline-block ml-1">&xrarr;</span></a>
-                    <br>
-                    <a href="#"><span class="far fa-heart text-300 mt-3"></span><span class="text-400 text-sans-serif pl-1">24</span></a>
-                    <a href="#"><span class="far fa-comment text-300 mt-3 ml-4"></span><span class="text-400 text-sans-serif pl-1">48</span></a>
-                  </div>
-                  <div class="col-lg-3">
-                    <img class="img-fluid" src="{{ page.slug }}/{{ page.images[0] }}" alt="{{ page.images[0] }}">
+              {% assign pages = site['use-cases'] | sort: 'post_date' | reverse %}
+              {% for page in pages %}
+                <div class="mb-6 mb-xl-8">
+                  <a class="text-black" href="{{ page.url }}">
+                    <h3>{{ page.title }}</h3>
+                  </a>
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <p class="text-sans-serif text-500" href="#">{{ page.summary }}</p>
+                      <a class="btn btn-link pl-0" href="{{ page.url }}"
+                        >read more<span class="d-inline-block ml-1">&xrarr;</span></a
+                      >
+                      <br>
+                      <a href="#"
+                        ><span class="far fa-heart text-300 mt-3"></span
+                        ><span class="text-400 text-sans-serif pl-1">24</span></a
+                      >
+                      <a href="#"
+                        ><span class="far fa-comment text-300 mt-3 ml-4"></span
+                        ><span class="text-400 text-sans-serif pl-1">48</span></a
+                      >
+                    </div>
+                    <div class="col-lg-3">
+                      <img class="img-fluid" src="{{ page.slug }}/{{ page.images[0] }}" alt="{{ page.images[0] }}">
+                    </div>
                   </div>
                 </div>
-              </div>
-{% endfor %}
+              {% endfor %}
             </div>
             <div class="col-lg-4 mt-6 mt-lg-0 pl-xl-7">
               <div class="row px-2">
@@ -109,38 +129,44 @@ layout: none
                   <div class="mt-6">
                     <h4>Contributors</h4>
                     <p>
-                      The Chain 76 &mdash; Use Cases website welcomes contributions from the community. And we are especially grateful for contributions from EY and ISPE GAMP Blockchain SIG. This website is edited by William Entriken.
+                      The Chain 76 &mdash; Use Cases website welcomes contributions from the community. And we are
+                      especially grateful for contributions from EY and ISPE GAMP Blockchain SIG. This website is edited
+                      by William Entriken.
                     </p>
                   </div>
                   <div class="mt-6">
                     <h4>Next update</h4>
                     <p>
-                      See our next updates in the <strong>use cases</strong> series at <a href="https://twitter.com/chain76org">@chain76org</a>. Please add your own use cases, mail us at <a href="mailto:hello@chain76.org">hello@chain76.org</a>.
+                      See our next updates in the <strong>use cases</strong> series at
+                      <a href="https://twitter.com/chain76org">@chain76org</a>. Please add your own use cases, mail us
+                      at <a href="mailto:hello@chain76.org">hello@chain76.org</a>.
                       <br>
-                      <span class="far fa-heart text-300 mt-3"></span><span class="text-400 text-sans-serif pl-1">203</span>
-                      <span class="far fa-comment text-300 mt-3 ml-4"></span><span class="text-400 text-sans-serif pl-1">15</span>
+                      <span class="far fa-heart text-300 mt-3"></span
+                      ><span class="text-400 text-sans-serif pl-1">203</span>
+                      <span class="far fa-comment text-300 mt-3 ml-4"></span
+                      ><span class="text-400 text-sans-serif pl-1">15</span>
                     </p>
                   </div>
                   <div class="mt-6">
                     <h4>Tags</h4>
                     <ul class="nav mt-3">
-{% assign tags = site.use-cases | map: 'tags' | uniq %}
-{% for tag in tags %}
-                      <li>
-                        <span class="btn btn-xs btn-outline-secondary m-1">{{ tag }}</span>
-                      </li>
-{% endfor %}
+                      {% assign tags = site['use-cases'] | map: 'tags' | uniq %}
+                      {% for tag in tags %}
+                        <li>
+                          <span class="btn btn-xs btn-outline-secondary m-1">{{ tag }}</span>
+                        </li>
+                      {% endfor %}
                     </ul>
-                  </div>  
+                  </div>
                   <div class="mt-6">
                     <h4>Companies</h4>
                     <ul class="bullet-inside pl-0 text-sans-serif">
-{% assign companies = site.use-cases | map: 'companies' | uniq %}
-{% for company in companies %}
-                      <li>
-                        <a class="text-600" href="#">{{ company }}</a>
-                      </li>
-{% endfor %}
+                      {% assign companies = site['use-cases'] | map: 'companies' | uniq %}
+                      {% for company in companies %}
+                        <li>
+                          <a class="text-600" href="#">{{ company }}</a>
+                        </li>
+                      {% endfor %}
                     </ul>
                   </div>
                 </div>
@@ -148,33 +174,34 @@ layout: none
             </div>
           </div>
         </div>
-        <!-- end of .container-->
-
+        <!-- end of .container -->
       </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
+      <!-- <section> close ============================ -->
+      <!-- ============================================ -->
     </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
+    <!-- =============================================== -->
+    <!-- End of Main Content -->
+    <!-- =============================================== -->
 
+    <!-- =============================================== -->
+    <!-- Footer -->
+    <!-- =============================================== -->
+    <footer
+      class="footer bg-black text-600 py-4 text-sans-serif text-center overflow-hidden"
+      data-zanim-timeline="{}"
+      data-zanim-trigger="scroll"
+    >
+      <div class="container">
+        <a href="https://chain76.org"
+          ><img style="height:24px;width:24px" src="assets/img/favicons/favicon-32x32.png"> Chain 76</a
+        >
+        &mdash; Pharmaceuticals, supply chain, and blockchain
+      </div>
+    </footer>
 
-
-    <!--===============================================-->
-    <!--    Footer-->
-    <!--===============================================-->
-    <footer class="footer bg-black text-600 py-4 text-sans-serif text-center overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-        <div class="container">
-          <a href="https://chain76.org"><img style="height:24px;width:24px" src="assets/img/favicons/favicon-32x32.png"> Chain 76</a> &mdash; Pharmaceuticals, supply chain, and blockchain
-        </div>
-      </footer>
-  
-
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
+    <!-- =============================================== -->
+    <!-- JavaScripts -->
+    <!-- =============================================== -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
@@ -187,7 +214,5 @@ layout: none
     <script src="assets/lib/owl.carousel/owl.carousel.js"></script>
     <script src="assets/lib/jquery.mb.ytplayer/jquery.mb.YTPlayer.min.js"></script>
     <script src="assets/js/theme.js"></script>
-
   </body>
-
 </html>
