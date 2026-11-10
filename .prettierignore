@@ -1,2 +1,6 @@
 # Markdown is formatted by markdownlint-cli2. Prettier's Markdown parser fights kramdown.
 *.md
+
+# Third-party scripts. Prettier would reprint the minified copies.
+assets/js/
+assets/lib/

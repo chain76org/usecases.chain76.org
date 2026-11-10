@@ -3,38 +3,21 @@
 @license Sticky-kit v1.1.3 | WTFPL | Leaf Corcoran 2015 | http://leafo.net
 */
 
-(function () {
+
+(function() {
   var $, win;
 
   $ = this.jQuery || window.jQuery;
 
   win = $(window);
 
-  $.fn.stick_in_parent = function (opts) {
-    var doc,
-      elm,
-      enable_bottoming,
-      inner_scrolling,
-      manual_spacer,
-      offset_top,
-      outer_width,
-      parent_selector,
-      recalc_every,
-      sticky_class,
-      _fn,
-      _i,
-      _len;
+  $.fn.stick_in_parent = function(opts) {
+    var doc, elm, enable_bottoming, inner_scrolling, manual_spacer, offset_top, outer_width, parent_selector, recalc_every, sticky_class, _fn, _i, _len;
 
     if (opts == null) {
       opts = {};
     }
-    ((sticky_class = opts.sticky_class),
-      (inner_scrolling = opts.inner_scrolling),
-      (recalc_every = opts.recalc_every),
-      (parent_selector = opts.parent),
-      (offset_top = opts.offset_top),
-      (manual_spacer = opts.spacer),
-      (enable_bottoming = opts.bottoming));
+    sticky_class = opts.sticky_class, inner_scrolling = opts.inner_scrolling, recalc_every = opts.recalc_every, parent_selector = opts.parent, offset_top = opts.offset_top, manual_spacer = opts.spacer, enable_bottoming = opts.bottoming;
     if (offset_top == null) {
       offset_top = 0;
     }
@@ -51,41 +34,23 @@
     if (enable_bottoming == null) {
       enable_bottoming = true;
     }
-    outer_width = function (el) {
+    outer_width = function(el) {
       var computed, w, _el;
 
       if (window.getComputedStyle) {
         _el = el[0];
         computed = window.getComputedStyle(el[0]);
-        w =
-          parseFloat(computed.getPropertyValue("width")) +
-          parseFloat(computed.getPropertyValue("margin-left")) +
-          parseFloat(computed.getPropertyValue("margin-right"));
+        w = parseFloat(computed.getPropertyValue("width")) + parseFloat(computed.getPropertyValue("margin-left")) + parseFloat(computed.getPropertyValue("margin-right"));
         if (computed.getPropertyValue("box-sizing") !== "border-box") {
-          w +=
-            parseFloat(computed.getPropertyValue("border-left-width")) +
-            parseFloat(computed.getPropertyValue("border-right-width")) +
-            parseFloat(computed.getPropertyValue("padding-left")) +
-            parseFloat(computed.getPropertyValue("padding-right"));
+          w += parseFloat(computed.getPropertyValue("border-left-width")) + parseFloat(computed.getPropertyValue("border-right-width")) + parseFloat(computed.getPropertyValue("padding-left")) + parseFloat(computed.getPropertyValue("padding-right"));
         }
         return w;
       } else {
         return el.outerWidth(true);
       }
     };
-    _fn = function (elm, padding_bottom, parent_top, parent_height, top, height, el_float, detached) {
-      var bottomed,
-        detach,
-        fixed,
-        last_pos,
-        last_scroll_height,
-        offset,
-        parent,
-        recalc,
-        recalc_and_tick,
-        recalc_counter,
-        spacer,
-        tick;
+    _fn = function(elm, padding_bottom, parent_top, parent_height, top, height, el_float, detached) {
+      var bottomed, detach, fixed, last_pos, last_scroll_height, offset, parent, recalc, recalc_and_tick, recalc_counter, spacer, tick;
 
       if (elm.data("sticky_kit")) {
         return;
@@ -103,9 +68,9 @@
       bottomed = false;
       spacer = manual_spacer != null ? manual_spacer && elm.closest(manual_spacer) : $("<div />");
       if (spacer) {
-        spacer.css("position", elm.css("position"));
+        spacer.css('position', elm.css('position'));
       }
-      recalc = function () {
+      recalc = function() {
         var border_top, padding_top, restore;
 
         if (detached) {
@@ -124,14 +89,12 @@
             elm.insertAfter(spacer);
             spacer.detach();
           }
-          elm
-            .css({
-              position: "",
-              top: "",
-              width: "",
-              bottom: "",
-            })
-            .removeClass(sticky_class);
+          elm.css({
+            position: "",
+            top: "",
+            width: "",
+            bottom: ""
+          }).removeClass(sticky_class);
           restore = true;
         }
         top = elm.offset().top - (parseInt(elm.css("margin-top"), 10) || 0) - offset_top;
@@ -143,7 +106,7 @@
             height: height,
             display: elm.css("display"),
             "vertical-align": elm.css("vertical-align"),
-            float: el_float,
+            "float": el_float
           });
         }
         if (restore) {
@@ -157,7 +120,7 @@
       last_pos = void 0;
       offset = offset_top;
       recalc_counter = recalc_every;
-      tick = function () {
+      tick = function() {
         var css, delta, recalced, scroll, will_bottom, win_height;
 
         if (detached) {
@@ -186,13 +149,11 @@
             will_bottom = scroll + height + offset > parent_height + parent_top;
             if (bottomed && !will_bottom) {
               bottomed = false;
-              elm
-                .css({
-                  position: "fixed",
-                  bottom: "",
-                  top: offset,
-                })
-                .trigger("sticky_kit:unbottom");
+              elm.css({
+                position: "fixed",
+                bottom: "",
+                top: offset
+              }).trigger("sticky_kit:unbottom");
             }
           }
           if (scroll < top) {
@@ -207,7 +168,7 @@
             css = {
               position: "",
               width: "",
-              top: "",
+              top: ""
             };
             elm.css(css).removeClass(sticky_class).trigger("sticky_kit:unstick");
           }
@@ -220,7 +181,7 @@
                 offset = Math.min(offset_top, offset);
                 if (fixed) {
                   elm.css({
-                    top: offset + "px",
+                    top: offset + "px"
                   });
                 }
               }
@@ -231,7 +192,7 @@
             fixed = true;
             css = {
               position: "fixed",
-              top: offset,
+              top: offset
             };
             css.width = elm.css("box-sizing") === "border-box" ? elm.outerWidth() + "px" : elm.width() + "px";
             elm.css(css).addClass(sticky_class);
@@ -252,24 +213,22 @@
             bottomed = true;
             if (parent.css("position") === "static") {
               parent.css({
-                position: "relative",
+                position: "relative"
               });
             }
-            return elm
-              .css({
-                position: "absolute",
-                bottom: padding_bottom,
-                top: "auto",
-              })
-              .trigger("sticky_kit:bottom");
+            return elm.css({
+              position: "absolute",
+              bottom: padding_bottom,
+              top: "auto"
+            }).trigger("sticky_kit:bottom");
           }
         }
       };
-      recalc_and_tick = function () {
+      recalc_and_tick = function() {
         recalc();
         return tick();
       };
-      detach = function () {
+      detach = function() {
         detached = true;
         win.off("touchmove", tick);
         win.off("scroll", tick);
@@ -281,7 +240,7 @@
           position: "",
           bottom: "",
           top: "",
-          width: "",
+          width: ""
         });
         parent.position("position", "");
         if (fixed) {
@@ -307,4 +266,5 @@
     }
     return this;
   };
+
 }).call(this);
